@@ -26,10 +26,9 @@ export default class App extends Component {
         <br />
         {
           data.map((project) => (
-            <span> {project.name} </span>
+            <span key={project.id}> {project.name} </span>
           ))
         }
-        <div>set travis deploy</div>
       </div>
     )
   }
