@@ -1,9 +1,9 @@
-import Project from '../models/Project'
+import Project from '../models/Project';
 
 module.exports = (app) => {
   app.get('/api/projects', async (req, res) => {
-    const projects = await Project.find()
+    const projects = await Project.find();
 
-    res.send(projects)
+    res.send(projects);
   });
-}
+};
