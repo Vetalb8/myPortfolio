@@ -1,0 +1,71 @@
+{
+  "name": "portfolio-server",
+  "version": "0.1.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "rimraf ./dist && babel -d ./dist ./server -s && node dist/app.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "lint:js": "eslint ./server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build:prod --prefix client"
+  },
+  "keywords": [
+    "express"
+  ],
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
+  },
+  "author": "Vkudla",
+  "license": "ISC",
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "airbnb-base"
+    ],
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "global-require": "off"
+    }
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.1.11",
+    "concurrently": "^3.5.1",
+    "cross-env": "^5.1.4",
+    "koa": "^2.5.0",
+    "nodemon": "^1.12.1",
+    "mongoose": "^4.12.3",
+    "express": "^4.16.2",
+    "body-parser": "^1.18.2",
+    "cookie-session": "^2.0.0-beta.3",
+    "rimraf": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "expect": "^1.20.2",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2",
+    "supertest": "^2.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}

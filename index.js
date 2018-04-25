@@ -1,0 +1,4 @@
+// eslint-disable-next-line
+require('babel-core/register');
+require('babel-polyfill');
+require('./server/app');
