@@ -29,6 +29,7 @@ export default class App extends Component {
             <span> {project.name} </span>
           ))
         }
+        <div>set travis deploy</div>
       </div>
     )
   }
