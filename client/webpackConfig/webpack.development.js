@@ -45,7 +45,7 @@ module.exports = merge([
   //     emitWarning: true,
   //   }
   // }),
-  // parts.loadSCSS(),
+  parts.loadSCSS(),
   parts.Babel({
     include: PATHS.project,
     options: {

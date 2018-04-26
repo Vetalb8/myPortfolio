@@ -55,6 +55,14 @@ module.exports = merge([
       name: '[name].[ext]',
     },
   }),
+  parts.extractSCSS({
+    use: [
+      { loader: 'css-loader', options: { sourceMap: true } },
+      parts.autoprefix(),
+      'resolve-url-loader',
+      { loader: 'sass-loader', options: { sourceMap: true } }
+    ],
+  }),
   parts.extractBundles([
     {
       name: 'vendor',

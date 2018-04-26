@@ -7,7 +7,7 @@ import { createLogger } from 'redux-logger'
 import { loggers } from 'redux-act'
 import reducers from './reducers'
 
-import App from './components/App'
+import App from './components/App/App'
 
 
 const logger = createLogger({
@@ -37,7 +37,7 @@ const render = (Component) =>
 render(App)
 
 if (module.hot) {
-  module.hot.accept('./components/App', () => {
+  module.hot.accept('./components/App/App', () => {
     render(App)
   })
 
