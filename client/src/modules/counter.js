@@ -8,7 +8,7 @@ export const increment = createAction(`${name}/Add`)
 const initialState = 0
 
 const counter = createReducer({
-  [increment]: (state, value) => value,
+  [increment]: (state, payload) => payload,
 }, initialState)
 
 export default counter
