@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 
 const ProjectSchema = new mongoose.Schema({
@@ -6,10 +6,10 @@ const ProjectSchema = new mongoose.Schema({
     type: String,
     required: true,
     minlength: 1,
-    trim: true
+    trim: true,
   },
   startDate: Date,
   endDate: Date,
-})
+});
 
-export default mongoose.model('project', ProjectSchema)
+export default mongoose.model('project', ProjectSchema);

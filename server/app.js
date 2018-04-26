@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import cookieSession from 'cookie-session';
 
 import keys from '../config/keys';
-import { mongoose } from './db/mongoose';
+import mongoose from './db/mongoose';
 
 
 const app = express();
@@ -14,10 +14,9 @@ app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,
     keys: keys.COOKIE_KEY,
-  })
+  }),
 );
 
-require('./routes/testRoutes')(app);
 require('./routes/projectRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
@@ -27,7 +26,7 @@ if (process.env.NODE_ENV === 'production') {
 
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'));
-  })
+  });
 }
 
 const PORT = keys.PORT;
