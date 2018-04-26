@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import './MainPage.scss'
+
 
 export default class MainPage extends Component {
 
@@ -8,7 +10,9 @@ export default class MainPage extends Component {
 
   render() {
     return (
-      <div>MainPage</div>
+      <div className="mainPage">
+        <h1 className="title">Vitaliy Kudla</h1>
+      </div>
     )
   }
 
