@@ -1,0 +1,62 @@
+@import "../../styles/main";
+
+.welcomeSection {
+  height: 712px;
+  background: linear-gradient(to bottom, $color-primary 50%, $color-primary-light 100%);
+  @include center-child;
+
+  .title {
+    text-transform: uppercase;
+    font-size: 10rem;
+    line-height: 10rem;
+    color: $color-white;
+  }
+
+  .subtitle {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    text-align: center;
+    color: $color-primary-dark;
+    letter-spacing: .3rem;
+  }
+
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+
+    &__item {
+      font-size: $default-font-size;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &__link {
+      padding-left: 1rem;
+
+      &:link,
+      &:visited {
+        font-size: $default-font-size;
+        color: $color-primary-dark;
+        display: inline-block;
+        text-decoration: none;
+        transition: all .2s;
+      }
+    }
+  }
+
+  .icon {
+    width: 48px;
+    height: 48px;
+    background-color: $color-white;
+    border-radius: 50%;
+    font-size: 2.3rem;
+    @include center-child;
+  }
+
+  .icon-basic {
+    height: 3.4rem;
+    color: $icon-color;
+  }
+}

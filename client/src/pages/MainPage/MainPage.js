@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import './MainPage.scss'
+
+import WelcomeSection from '../../components/WelcomeSection/WelcomeSection'
 
 
 export default class MainPage extends Component {
@@ -11,7 +12,7 @@ export default class MainPage extends Component {
   render() {
     return (
       <div className="mainPage">
-        <h1 className="title">Vitaliy Kudla</h1>
+        <WelcomeSection />
       </div>
     )
   }
