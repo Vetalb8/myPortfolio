@@ -1,7 +1,7 @@
 @import "../../styles/main";
 
 .welcomeSection {
-  height: 712px;
+  padding: 6rem 0;
   background: linear-gradient(to bottom, $color-primary 50%, $color-primary-light 100%);
   @include center-child;
 
