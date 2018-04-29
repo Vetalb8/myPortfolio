@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react'
 
 import './WelcomeSection.scss'
 
+import Icon from '../../components/Icon/Icon'
+
 
 export default class WelcomeSection extends PureComponent {
 
@@ -15,15 +17,15 @@ export default class WelcomeSection extends PureComponent {
           <h3 className="subtitle">Frontend Developer</h3>
           <div className="contacts">
             <div className="contacts__item">
-              <div className="icon"><i className="icon-basic icon-basic-smartphone" /></div>
+              <Icon name="smartphone" />
               <a className="contacts__link" href="#">+7 987 389 4922</a>
             </div>
             <div className="contacts__item">
-              <div className="icon"><i className="icon-basic icon-basic-mail" /></div>
+              <Icon name="mail" />
               <a className="contacts__link" href="#">vitalya_kudla@mail.ru</a>
             </div>
             <div className="contacts__item">
-              <div className="icon"><i className="icon-basic icon-basic-webpage" /></div>
+              <Icon name="webpage" />
               <a className="contacts__link" href="#">www.info.vkudla.ru</a>
             </div>
           </div>

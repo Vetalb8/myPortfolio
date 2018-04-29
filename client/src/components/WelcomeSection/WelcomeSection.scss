@@ -1,62 +1,51 @@
 @import "../../styles/main";
 
 .welcomeSection {
-  padding: 6rem 0;
+  //padding: 6rem 0;
+  height: 80%;
   background: linear-gradient(to bottom, $color-primary 50%, $color-primary-light 100%);
   @include center-child;
 
   .title {
     text-transform: uppercase;
-    font-size: 10rem;
-    line-height: 10rem;
     color: $color-white;
+    font-size: vw(30);
+    line-height: vw(30);
+    letter-spacing: .2rem;
   }
 
   .subtitle {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
-    text-align: center;
+    margin-top: vw(10);
+    font-size: vw(20);
+    line-height: vw(20);
     color: $color-primary-dark;
-    letter-spacing: .3rem;
+    font-weight: 400;
   }
 
   .contacts {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.5rem;
-
+    margin-top: vw(30);
+  //  display: flex;
+  //  justify-content: space-between;
+  //
     &__item {
       font-size: $default-font-size;
       display: flex;
       align-items: center;
       cursor: pointer;
+      margin-bottom: vw(10);
     }
 
     &__link {
-      padding-left: 1rem;
+      padding-left: vw(10);
 
       &:link,
       &:visited {
-        font-size: $default-font-size;
+        font-size: vw(16);
         color: $color-primary-dark;
         display: inline-block;
         text-decoration: none;
         transition: all .2s;
       }
     }
-  }
-
-  .icon {
-    width: 48px;
-    height: 48px;
-    background-color: $color-white;
-    border-radius: 50%;
-    font-size: 2.3rem;
-    @include center-child;
-  }
-
-  .icon-basic {
-    height: 3.4rem;
-    color: $icon-color;
   }
 }
