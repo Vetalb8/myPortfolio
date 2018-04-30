@@ -6,6 +6,7 @@
   text-align: center;
   margin: vw(30) 0;
   position: relative;
+  color: rgba(0,0,0,.8);
 
   @include respond(tab-port) {
     font-size: 3.4rem;

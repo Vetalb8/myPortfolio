@@ -1,13 +1,88 @@
+@import "../../styles/main";
+
 .aboutSection {
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(tab-port) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
   .imageWrapper {
     text-align: center;
+    max-width: vw(260);
+
+    @include respond(tab-port) {
+      max-width: 23rem;
+      min-width: 23rem;
+    }
   }
 
   .image {
-    max-width: 260px;
+    max-width: vw(260);
     width: 100%;
     height: auto;
-    border: 1px solid #ccc;
-    padding: 4px;
+    border-style: solid;
+    border-color: $color-grey-light-3;
+    border-width: vw(1);
+    padding: vw(4);
+
+    @include respond(tab-port) {
+      max-width: 23rem;
+      border-width: .1rem;
+      padding: .4rem;
+    }
+  }
+
+  .intro {
+    margin-top: vw(30);
+
+    @include respond(tab-port) {
+      margin-top: 0;
+      padding: 0 3rem;
+    }
+  }
+
+  .text {
+    display: inline-block;
+    font-size: vw(14);
+    margin-bottom: vw(10);
+
+    @include respond(tab-port) {
+      font-size: $default-font-size;
+      margin-bottom: 1rem;
+      line-height: 2rem;
+    }
+
+    &--dropCap:first-letter {
+      float: left;
+      color: $color-black;
+      font-size: vw(75);
+      line-height: vw(60);
+      padding-top: vw(4);
+      padding-right: vw(8);
+      padding-left: vw(3);
+
+      @include respond(tab-port) {
+        font-size: 7.5rem;
+        line-height: 6rem;
+        padding-top: .4rem;
+        padding-right: .8rem;
+        padding-left: .3rem;
+      }
+    }
+
+    .highlight {
+      color: $color-primary-light;
+    }
+
+    .bold {
+      font-weight: 600;
+    }
   }
 }

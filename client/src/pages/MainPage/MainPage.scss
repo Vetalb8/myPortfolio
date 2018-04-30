@@ -1,3 +1,15 @@
+@import '../../styles/main';
+
 .mainPage {
   height: 100%;
+
+  .content {
+    padding: 0 vw(10);
+
+    @include respond(tab-port) {
+      max-width: 90rem;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+    }
+  }
 }

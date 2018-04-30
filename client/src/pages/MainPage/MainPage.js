@@ -14,7 +14,9 @@ export default class MainPage extends Component {
     return (
       <div className="mainPage">
         <WelcomeSection />
-        <AboutSection />
+        <main className="content">
+          <AboutSection />
+        </main>
       </div>
     )
   }
