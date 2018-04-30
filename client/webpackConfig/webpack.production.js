@@ -51,7 +51,7 @@ module.exports = merge([
   ),
   parts.loadImages({
     options: {
-      limit: 15000,
+      limit: 1000,
       name: '[name].[ext]',
     },
   }),
