@@ -49,12 +49,6 @@ module.exports = merge([
     'process.env.NODE_ENV',
     'production'
   ),
-  parts.loadImages({
-    options: {
-      limit: 1000,
-      name: '[name].[ext]',
-    },
-  }),
   parts.extractSCSS({
     use: [
       { loader: 'css-loader', options: { sourceMap: true } },

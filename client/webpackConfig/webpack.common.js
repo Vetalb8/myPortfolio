@@ -32,4 +32,9 @@ module.exports = merge([
       name: 'static/img/[name].[hash:8].[ext]',
     },
   }),
+  parts.loadSVG({
+    options: {
+      name: 'static/img/svg/[name].[hash:8].[ext]',
+    }
+  })
 ]);
