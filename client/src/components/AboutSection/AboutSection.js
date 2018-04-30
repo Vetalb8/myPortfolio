@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 import './AboutSection.scss'
@@ -8,7 +8,7 @@ import avatarImageSrc from './images/avatar.jpg'
 import Title from '../../components/typography/Title/Title'
 
 
-export default class AboutSection extends Component {
+export default class AboutSection extends PureComponent {
 
   static propTypes = {}
 
