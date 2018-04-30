@@ -1,13 +1,12 @@
 @import "../../styles/main";
 
 .welcomeSection {
-  //padding: 6rem 0;
   height: 80%;
   min-height: 30rem;
   background: linear-gradient(to bottom, $color-primary 50%, $color-primary-light 100%);
   @include center-child;
 
-  &__title {
+  .title {
     text-transform: uppercase;
     color: $color-white;
     font-size: vw(38);
@@ -20,7 +19,7 @@
     }
   }
 
-  &__subtitle {
+  .subtitle {
     margin-top: vw(10);
     font-size: vw(20);
     line-height: vw(20);
@@ -33,8 +32,8 @@
       line-height: 5rem;
     }
   }
-
-  &__contacts {
+  // TODO move contacts to a component
+  .contacts {
     margin-top: vw(30);
     display: flex;
     flex-direction: column;
@@ -44,38 +43,35 @@
       flex-direction: row;
     }
 
-    .contacts {
+    &__item {
+      font-size: $default-font-size;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: vw(10);
 
-      &__item {
-        font-size: $default-font-size;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        margin-bottom: vw(10);
+      @include respond(tab-port) {
+        margin-bottom: 1rem;
+      }
+    }
+    // TODO make common styles for link
+    &__link {
+      padding-left: vw(10);
 
-        @include respond(tab-port) {
-          margin-bottom: 1rem;
-        }
+      @include respond(tab-port) {
+        padding: 0 1rem;
       }
 
-      &__link {
-        padding-left: vw(10);
+      &:link,
+      &:visited {
+        font-size: vw(16);
+        color: $color-primary-dark;
+        display: inline-block;
+        text-decoration: none;
+        transition: all .2s;
 
         @include respond(tab-port) {
-          padding: 0 1rem;
-        }
-
-        &:link,
-        &:visited {
-          font-size: vw(16);
-          color: $color-primary-dark;
-          display: inline-block;
-          text-decoration: none;
-          transition: all .2s;
-
-          @include respond(tab-port) {
-            font-size: $default-font-size;
-          }
+          font-size: $default-font-size;
         }
       }
     }
