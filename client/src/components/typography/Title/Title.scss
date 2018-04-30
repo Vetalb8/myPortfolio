@@ -1,0 +1,48 @@
+@import "../../../styles/main";
+
+.title {
+  font-size: vw(34);
+  text-transform: uppercase;
+  text-align: center;
+  margin: vw(30) 0;
+  position: relative;
+
+  @include respond(tab-port) {
+    font-size: 3.4rem;
+    margin: 3rem 0;
+  }
+
+  &:after {
+    display: block;
+    width: vw(10);
+    height: vw(6);
+    content: '';
+    position: absolute;
+    background-color: $color-primary;
+    left: 50%;
+
+    @include respond(tab-port) {
+      width: 1rem;
+      height: .6rem;
+    }
+  }
+
+  &:before {
+    display: block;
+    width: vw(10);
+    height: vw(6);
+    content: '';
+    position: absolute;
+    background-color: $color-primary-light;
+    left: 50%;
+    bottom: vw(-6);
+    margin-left: vw(-10);
+
+    @include respond(tab-port) {
+      width: 1rem;
+      height: .6rem;
+      bottom: -0.6rem;
+      margin-left: -1rem;
+    }
+  }
+}
