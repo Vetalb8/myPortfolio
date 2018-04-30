@@ -18,15 +18,15 @@ export default class WelcomeSection extends PureComponent {
           <div className="contacts">
             <div className="contacts__item">
               <Icon name="smartphone" />
-              <a className="contacts__link" href="#">+7 987 389 4922</a>
+              <a className="contacts__link" href="tel:+79873894922">+7 987 389 4922</a>
             </div>
             <div className="contacts__item">
               <Icon name="mail" />
-              <a className="contacts__link" href="#">vitalya_kudla@mail.ru</a>
+              <a className="contacts__link" href="mailto:vitalya_kudla@mail.ru">vitalya_kudla@mail.ru</a>
             </div>
             <div className="contacts__item">
               <Icon name="webpage" />
-              <a className="contacts__link" href="#">www.info.vkudla.ru</a>
+              <a className="contacts__link" href="/">www.info.vkudla.ru</a>
             </div>
           </div>
         </div>
