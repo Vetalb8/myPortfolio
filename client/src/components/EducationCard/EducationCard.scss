@@ -1,0 +1,66 @@
+@import "../../styles/main";
+
+.educationCard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: vw(30);
+
+  @include respond(tab-port) {
+    flex-direction: row;
+    margin-bottom: 4rem;
+  }
+
+  &__university {
+
+    @include respond(tab-port) {
+      min-width: 18.5rem;
+      max-width: 18.5rem;
+    }
+  }
+
+  &__profession {
+
+    @include respond(tab-port) {
+      margin-left: 2rem;
+    }
+  }
+
+  &__topic {
+    text-transform: uppercase;
+    letter-spacing: vw(.5);
+    color: $color-black;
+    font-weight: 700;
+    font-size: vw(14.5);
+    margin: vw(10) 0;
+
+    @include respond(tab-port) {
+      font-size: 1.45rem;
+      letter-spacing: .05rem;
+      margin: 1rem 0;
+    }
+  }
+
+  &__year {
+    font-size: vw(12);
+    color: $color-primary-light;
+    background-color: lighten($color-primary-light, 35);
+    border-radius: 2.2rem;
+    padding-left: vw(11);
+
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+      padding-left: 1.1rem;
+    }
+  }
+
+  &__thesis {
+    font-size: vw(14.5);
+    margin-top: vw(10);
+    color: $color-grey-dark;
+
+    @include respond(tab-port) {
+      font-size: 1.45rem;
+      margin-top: 1rem;
+    }
+  }
+}
