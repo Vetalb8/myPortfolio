@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
 
 import './AboutSection.scss'
 
@@ -10,13 +9,11 @@ import Title from '../../components/typography/Title/Title'
 
 export default class AboutSection extends PureComponent {
 
-  static propTypes = {}
-
   render() {
     return (
       <div className="aboutSection">
         <Title>I am Vitaliy Kudla</Title>
-        <div className="content">
+        <div className="aboutSection__content">
           <div className="imageWrapper">
             <img className="image" src={avatarImageSrc} alt="vitaliy kudla"/>
           </div>

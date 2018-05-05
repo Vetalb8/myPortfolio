@@ -4,12 +4,12 @@
   height: 100%;
 
   .content {
-    padding: 0 vw(10);
+    padding: 0 vw(30);
 
     @include respond(tab-port) {
       max-width: 90rem;
       margin: 0 auto;
-      padding: 0 2.5rem;
+      padding: 0 3rem;
     }
   }
 }

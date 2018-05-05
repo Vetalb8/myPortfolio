@@ -7,8 +7,6 @@ import Icon from '../../components/Icon/Icon'
 
 export default class WelcomeSection extends PureComponent {
 
-  static propTypes = {}
-
   render() {
     return (
       <div className="welcomeSection">
@@ -33,5 +31,4 @@ export default class WelcomeSection extends PureComponent {
       </div>
     )
   }
-
 }
