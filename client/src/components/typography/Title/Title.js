@@ -4,7 +4,7 @@ import './Title.scss'
 
 
 const Title = ({ children }) => (
-  <h2 className="titleComponent">{children}</h2>
+  <h1 className="titleComponent">{children}</h1>
 )
 
 export default Title
