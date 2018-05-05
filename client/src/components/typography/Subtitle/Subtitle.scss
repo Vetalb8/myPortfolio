@@ -1,0 +1,45 @@
+@import "../../../styles/main";
+
+.subTitleComponent {
+  font-size: vw(22);
+  color: $color-black;
+  font-weight: 500;
+  position: relative;
+
+  @include respond(tab-port) {
+    font-size: 2.6rem;
+  }
+
+  &::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: vw(-5);
+    width: 100%;
+    height: vw(1);
+    background: linear-gradient(to right, $color-primary, rgba(56, 211, 230, 0) 100%);
+
+    @include respond(tab-port) {
+      bottom: -.5rem;
+      height: .1rem;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: vw(-6);
+    background: $color-primary-light;
+    width: vw(50);
+    height: vw(3);
+
+    @include respond(tab-port) {
+      bottom: -.6rem;
+      width: 5rem;
+      height: .3rem;
+    }
+  }
+}
