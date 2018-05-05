@@ -9,8 +9,8 @@
   .title {
     text-transform: uppercase;
     color: $color-white;
-    font-size: vw(38);
-    line-height: vw(38);
+    font-size: vw(34);
+    line-height: vw(34);
 
     @include respond(tab-port) {
       font-size: 8rem;
