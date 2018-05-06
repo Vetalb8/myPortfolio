@@ -1,0 +1,30 @@
+@import "../../../styles/main";
+
+.experienceCard {
+  // TODO ductape style in resume card
+  &__topic {
+    text-transform: uppercase;
+    letter-spacing: vw(.5);
+    color: $color-black;
+    font-weight: 700;
+    font-size: vw(14.5);
+    margin: vw(10) 0;
+
+    @include respond(tab-port) {
+      font-size: 1.45rem;
+      letter-spacing: .05rem;
+      margin: 1rem 0;
+    }
+  }
+
+  &__thesis {
+    font-size: vw(14.5);
+    margin-top: vw(10);
+    color: $color-grey-dark;
+
+    @include respond(tab-port) {
+      font-size: 1.45rem;
+      margin-top: 1rem;
+    }
+  }
+}

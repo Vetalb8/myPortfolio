@@ -1,6 +1,6 @@
-@import "../../styles/main";
+@import "../../../styles/main";
 
-.educationCard {
+.resumeCard {
   display: flex;
   flex-direction: column;
   margin-bottom: vw(30);
@@ -10,7 +10,7 @@
     margin-bottom: 4rem;
   }
 
-  &__university {
+  &__header {
 
     @include respond(tab-port) {
       min-width: 18.5rem;
@@ -18,7 +18,7 @@
     }
   }
 
-  &__profession {
+  &__content {
 
     @include respond(tab-port) {
       margin-left: 2rem;
@@ -50,17 +50,6 @@
     @include respond(tab-port) {
       font-size: 1.2rem;
       padding-left: 1.1rem;
-    }
-  }
-
-  &__thesis {
-    font-size: vw(14.5);
-    margin-top: vw(10);
-    color: $color-grey-dark;
-
-    @include respond(tab-port) {
-      font-size: 1.45rem;
-      margin-top: 1rem;
     }
   }
 }
