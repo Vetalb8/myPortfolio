@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "rimraf ./dist && babel -d ./dist ./server -s && node dist/app.js",
+    "start:cy": "npm install --prefix client && npm run build:prod --prefix client && http-server ./client/dist -a localhost -p 3000 -c-1",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -50,7 +51,8 @@
     "express": "^4.16.2",
     "body-parser": "^1.18.2",
     "cookie-session": "^2.0.0-beta.3",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "http-server": "^0.11.1"
   },
   "devDependencies": {
     "eslint": "^3.16.1",
