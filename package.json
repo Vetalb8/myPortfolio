@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "rimraf ./dist && babel -d ./dist ./server -s && node dist/app.js",
-    "start:cy": "npm install --prefix client && npm run build:prod --prefix client && http-server ./client/dist -a localhost -p 3000 -c-1",
+    "start:cy": "http-server ./client/dist -c-1",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
+    "client:build": "npm install --prefix client && npm run build:prod --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "lint:js": "eslint ./server",
     "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha server/**/*.test.js",
