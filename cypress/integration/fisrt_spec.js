@@ -1,6 +1,6 @@
 describe('First simple test', () => {
   it('should failed', () => {
-    cy.visit('/')
+    cy.visit('http://localhost:8080/')
 
     // Here we've made our first assertion using a '.should()' command.
     // An assertion is comprised of a chainer, subject, and optional value.
