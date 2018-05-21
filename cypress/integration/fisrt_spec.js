@@ -19,7 +19,7 @@ describe('First simple test', () => {
         .children().should('have.length', 3)
 
       cy
-        .get('.welcomeSection > .content > .title').should('have.text', 'Vitaliy Kudlo')
+        .get('.welcomeSection > .content > .title').should('have.text', 'Vitaliy Kudla')
     })
   })
 })

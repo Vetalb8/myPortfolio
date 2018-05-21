@@ -11,7 +11,7 @@ export default class WelcomeSection extends PureComponent {
     return (
       <div className="welcomeSection">
         <div className="content">
-          <h1 className="title">Vitaliy Kudla</h1>
+          <h1 className="title">Vitaliy Kudla ;)</h1>
           <h3 className="subtitle">Frontend Developer</h3>
           <div className="contacts">
             <div className="contacts__item">
